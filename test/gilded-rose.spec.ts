@@ -24,6 +24,7 @@ describe('Gilded Rose', function () {
             new Item('Backstage passes to a TAFKAL80ETC concert', 3, 46),
             new Item('Backstage passes to a TAFKAL80ETC concert', 15, 30),
             new Item('Backstage passes to a TAFKAL80ETC concert', 15, 50),
+            new Item('Backstage passes to a TAFKAL80ETC concert', 10, 35),
             new Item('Sulfuras, Hand of Ragnaros', 0, 80),
             new Item('Sulfuras, Hand of Ragnaros', 10, 80)
         ];
@@ -50,6 +51,7 @@ describe('Gilded Rose', function () {
             new Item('Backstage passes to a TAFKAL80ETC concert', 0, 50),
             new Item('Backstage passes to a TAFKAL80ETC concert', 12, 33),
             new Item('Backstage passes to a TAFKAL80ETC concert', 12, 50),
+            new Item('Backstage passes to a TAFKAL80ETC concert', 7, 41),
             new Item('Sulfuras, Hand of Ragnaros', 0, 80),
             new Item('Sulfuras, Hand of Ragnaros', 10, 80)
           ]);
@@ -101,6 +103,18 @@ describe('Gilded Rose', function () {
             new Item('Aged Brie', -1, 7),
             new Item('Aged Brie', -1, 12),
             new Item('Aged Brie', -6, 42),
+        ]);
+        expect(gildedRose).to.deep.equal(gildedRoseOutput);
+    });
+
+    it('should not have a value greater than 50 (excluding Sufuras', function() {
+        const items: Array<Item> = [
+            
+        ];
+        const gildedRose = new GildedRose(items)
+        gildedRose.updateQuality();
+        const gildedRoseOutput = new GildedRose([
+            
         ]);
         expect(gildedRose).to.deep.equal(gildedRoseOutput);
     });
