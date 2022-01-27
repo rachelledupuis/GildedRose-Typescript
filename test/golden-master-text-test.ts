@@ -1,7 +1,7 @@
 import { Item, GildedRose } from '../app/gilded-rose';
 
 const items: Array<Item> = [
-    new Item('Backstage passes to a TAFKAL80ETC concert', 10, 35),
+    new Item('Item 8', 1, 1),
 ];
 
 const gildedRose = new GildedRose(items)
